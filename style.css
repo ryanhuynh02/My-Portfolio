@@ -2,7 +2,7 @@
 .hamburger {
     position: fixed;
     top: 1rem;
-    right: 1rem;
+    left: 1rem;
     font-size: 2rem;
     cursor: pointer;
     z-index: 1001;
@@ -136,11 +136,17 @@
   
     /* #menu-toggle:checked + .menu-icon + .nav-links {
       display: flex;
-    }
+    } */
   
     .menu-icon {
-      display: block;
-    } */
+        position: absolute;
+        top: 50%;
+        right: 1.5rem;
+        transform: translateY(-50%);
+        font-size: 1.6rem;
+        cursor: pointer;
+        z-index: 1001;
+    }
   }
   
   body {
