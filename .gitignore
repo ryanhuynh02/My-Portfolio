@@ -1,0 +1,14 @@
+# macOS system files
+.DS_Store
+
+# Logs
+*.log
+
+# Node modules (if you ever use Node.js)
+node_modules/
+
+# VS Code settings
+.vscode/
+
+# Environment files (if using secrets)
+.env
