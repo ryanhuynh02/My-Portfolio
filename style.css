@@ -52,25 +52,17 @@
   
 /* Navbar styles */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    justify-content: flex-end;
-    align-items: center;
-    background: #111;
-    color: white;
+    background-color: #111;
     padding: 1rem 2rem;
-    position: relative;
-  }
-  
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
   }
   
   .nav-links {
     list-style: none;
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
     gap: 1.5rem;
+    margin: 0;
   }
   
   .nav-links li a {
@@ -79,14 +71,49 @@
     font-weight: 500;
   }
   
-  .menu-icon {
-    display: none;
-    font-size: 2rem;
+  /* Hamburger inside nav */
+  .hamburger {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
     cursor: pointer;
   }
   
-  #menu-toggle {
-    display: none;
+  /* Side menu styles */
+  .side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #2e00ff;
+    overflow-x: hidden;
+    transition: 0.4s ease;
+    padding-top: 60px;
+    z-index: 1000;
+  }
+  
+  .side-menu nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-left: 2rem;
+  }
+  
+  .side-menu a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
   }
   
   /* Responsive menu */
