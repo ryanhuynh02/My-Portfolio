@@ -129,13 +129,13 @@
       text-align: center;
     }
   
-    #menu-toggle:checked + .menu-icon + .nav-links {
+    /* #menu-toggle:checked + .menu-icon + .nav-links {
       display: flex;
     }
   
     .menu-icon {
       display: block;
-    }
+    } */
   }
   
   body {

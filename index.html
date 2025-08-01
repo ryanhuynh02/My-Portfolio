@@ -73,14 +73,16 @@
         </div>
 
         <nav class="navbar">
-          <input type="checkbox" id="menu-toggle">
-          <label for="menu-toggle" class="menu-icon">&#9776;</label>
-          <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="mailto:ryhuynh2@gmail.com">Contact</a></li>
-          </ul>
+            <ul class="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="mailto:your.email@example.com">Contact</a></li>
+              <li>
+                <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+              </li>
+            </ul>
         </nav>
+
         <div class="intro">
           <h1>Hi, I'm Ryan Huynh</h1>
           <p>Aspiring developer | Portfolio of my work</p>
@@ -91,7 +93,7 @@
     <h2>Projects</h2>
     <div class="project-card">
       <a href="projects/project1.html">Project 1</a>
-      <p>Short description of what this project does, what tools you used, and what you learned.</p>
+      <p>Door Sensor.</p>
     </div>
     <!-- Add more .project-card blocks here -->
   </section>
@@ -99,7 +101,7 @@
   <footer>
     &copy; 2025 Ryan Huynh | All rights reserved
   </footer>
-  
+
   <script>
     function toggleMenu() {
       const menu = document.getElementById('sideMenu');
