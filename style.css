@@ -1,8 +1,8 @@
 /* Hamburger icon */
 .hamburger {
-    position: fixed;
+    position: absolute;
     top: 1rem;
-    left: 1rem;
+    right: 1rem;
     font-size: 2rem;
     cursor: pointer;
     z-index: 1001;
