@@ -1,13 +1,17 @@
 /* Hamburger icon */
 .hamburger {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 2rem;
+    top: 50%;
+    right: 2rem; /* adjust as needed */
+    transform: translateY(-50%);
+    font-size: 1.6rem;
     cursor: pointer;
     z-index: 1001;
     color: white;
+    background: none;
+    border: none;
   }
+  
   
   /* Sidebar menu styling */
   .side-menu {
@@ -136,7 +140,7 @@
   
     /* #menu-toggle:checked + .menu-icon + .nav-links {
       display: flex;
-    } */
+    }
   
     .menu-icon {
         position: absolute;
@@ -146,7 +150,7 @@
         font-size: 1.6rem;
         cursor: pointer;
         z-index: 1001;
-    }
+    } */
   }
   
   body {
