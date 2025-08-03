@@ -58,18 +58,19 @@ html, body {
   }
   
   /* ─── Sidebar (slide in from right) ───────────────────────────────────── */
-.side-menu {
+  .side-menu {
     height: 100%;
-    width: 0;              /* hidden by default */
+    width: 0;
     position: fixed;
     top: 0;
     right: 0;
+    overflow: hidden;           /* clip _all_ overflow (x and y) */
     background-color: #2e00ff;
-    overflow-x: hidden;
     transition: width 0.4s ease;
     padding-top: 60px;
     z-index: 1000;
   }
+  
   
   .side-menu nav {
     display: flex;
