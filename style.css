@@ -62,25 +62,19 @@
   .nav-links {
     list-style: none;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
     gap: 2rem;
     margin: 0;
     padding: 0;
   }
   
-  .nav-links li {
-    display: flex;
-    align-items: center;
-  }
-  
-  .nav-links a {
+  .nav-links li a {
     color: white;
     text-decoration: none;
     font-weight: 500;
   }
   
   .hamburger {
+    display: none;
     background: none;
     border: none;
     color: white;
@@ -127,7 +121,7 @@
   }
   
   /* Responsive menu */
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     .nav-links {
       position: absolute;
       top: 100%;
@@ -152,8 +146,19 @@
         cursor: pointer;
         z-index: 1001;
     }
-  }
+  } */
   
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+  
+    .hamburger {
+      margin-left: auto;
+    }
+  }
+
   body {
     animation: fadeIn 0.8s ease-in;
   }
