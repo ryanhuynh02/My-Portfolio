@@ -69,8 +69,13 @@
         </nav>
       
         <!-- Sidebar menu (unchanged) -->
-        <div id="sideMenu" class="side-menu">
-          <span class="close-btn" onclick="toggleMenu()">&times;</span>
+        <!-- <div id="sideMenu" class="side-menu">
+          <span class="close-btn" onclick="toggleMenu()">&times;</span> -->
+          <div id="sideMenu" class="side-menu">
+               <button class="close-btn" onclick="toggleMenu()">
+                  close <span class="close-icon">&times;</span>
+                </button>
+          </div>
           <nav>
             <a href="index.html">Home</a>
             <a href="#projects">Projects</a>
@@ -101,13 +106,20 @@
   <script>
     function toggleMenu() {
       const menu = document.getElementById('sideMenu');
-      if (menu.style.width === '250px') {
-        menu.style.width = '0';
-      } else {
+      const burger = document.querySelector('.hamburger');
+  
+      // toggle the menu “open” state
+      const isOpen = menu.classList.toggle('open');
+  
+      if (isOpen) {
         menu.style.width = '250px';
+        burger.style.display = 'none';       // hide the hamburger
+      } else {
+        menu.style.width = '0';
+        burger.style.display = 'block';      // show it again
       }
     }
   </script>
-  
+    
 </body>
 </html>

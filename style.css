@@ -47,7 +47,7 @@ html, body {
     font-weight: 500;
   }
   
-  /* always-visible hamburger */
+  /* always-visible hamburger intil menu opens */
   .hamburger {
     background: none;
     border: none;
@@ -57,15 +57,13 @@ html, body {
     z-index: 1001;
   }
   
-  /*──────────────────────────────────────────────────────────────────────────────
-    Sidebar (off-canvas) Menu
-  ──────────────────────────────────────────────────────────────────────────────*/
-  .side-menu {
+  /* ─── Sidebar (slide in from right) ───────────────────────────────────── */
+.side-menu {
     height: 100%;
-    width: 0;                /* start hidden */
+    width: 0;              /* hidden by default */
     position: fixed;
     top: 0;
-    right: 0;               /* slide in from right */
+    right: 0;
     background-color: #2e00ff;
     overflow-x: hidden;
     transition: width 0.4s ease;
@@ -86,13 +84,23 @@ html, body {
     text-decoration: none;
   }
   
-  .close-btn {
+/* ─── Close Button (inside sidebar) ───────────────────────────────────── */
+.close-btn {
     position: absolute;
     top: 1rem;
     right: 1.5rem;
-    font-size: 2rem;
-    cursor: pointer;
+    background: none;
+    border: none;
     color: white;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  .close-btn .close-icon {
+    font-size: 1.5rem;
   }
   
   /*──────────────────────────────────────────────────────────────────────────────
