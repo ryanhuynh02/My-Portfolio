@@ -1,64 +1,39 @@
-/* Hamburger icon */
-.hamburger {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 2rem;
-    cursor: pointer;
-    z-index: 1001;
+/*Base & Font*/
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #333;
+    font-family: 'Inter', sans-serif; /* loaded via the <link> in your HTML */
+    animation: fadeIn 0.8s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  
+  /*──────────────────────────────────────────────────────────────────────────────
+    Header (intro area)
+  ──────────────────────────────────────────────────────────────────────────────*/
+  header {
+    background: #111;
     color: white;
+    padding: 2rem;
+    position: relative;
   }
   
-  /* Sidebar menu styling */
-  .side-menu {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: #2e00ff;
-    overflow-x: hidden;
-    transition: 0.4s ease;
-    padding-top: 60px;
-    z-index: 1000;
-  }
-  
-  .side-menu nav {
+  /*──────────────────────────────────────────────────────────────────────────────
+    Navbar
+  ──────────────────────────────────────────────────────────────────────────────*/
+  .navbar {
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    padding-right: 2rem;
-  }
-  
-  .side-menu a {
-    color: white;
-    font-size: 1.5rem;
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-  
-  .side-menu a:hover {
-    color: #00ffff;
-  }
-  
-  .close-btn {
-    position: absolute;
-    top: 1rem;
-    left: 2.5rem;
-    font-size: 2rem;
-    cursor: pointer;
-    color: white;
-  }
-  
-/* Navbar styles */
-.navbar {
-    background-color: #111;
-    padding: 1rem 2rem;
-    display: flex;
+    justify-content: flex-end;
     align-items: center;
-    justify-content: space-between;
-  }     
+    gap: 2rem;
+  }
   
+  /* the three links */
   .nav-links {
     list-style: none;
     display: flex;
@@ -66,15 +41,14 @@
     margin: 0;
     padding: 0;
   }
-  
-  .nav-links li a {
+  .nav-links a {
     color: white;
     text-decoration: none;
     font-weight: 500;
   }
   
+  /* always-visible hamburger */
   .hamburger {
-    display: none;
     background: none;
     border: none;
     color: white;
@@ -83,17 +57,18 @@
     z-index: 1001;
   }
   
-  
-  /* Side menu styles */
+  /*──────────────────────────────────────────────────────────────────────────────
+    Sidebar (off-canvas) Menu
+  ──────────────────────────────────────────────────────────────────────────────*/
   .side-menu {
     height: 100%;
-    width: 0;
+    width: 0;                /* start hidden */
     position: fixed;
     top: 0;
-    right: 0;
+    right: 0;               /* slide in from right */
     background-color: #2e00ff;
     overflow-x: hidden;
-    transition: 0.4s ease;
+    transition: width 0.4s ease;
     padding-top: 60px;
     z-index: 1000;
   }
@@ -120,51 +95,49 @@
     color: white;
   }
   
-  /* Responsive menu */
-  /* @media (max-width: 768px) {
-    .nav-links {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: #111;
-      flex-direction: column;
-      display: none;
-      text-align: center;
-    }
-  
-    #menu-toggle:checked + .menu-icon + .nav-links {
-      display: flex;
-    }
-  
-    .menu-icon {
-        position: absolute;
-        top: 50%;
-        right: 1.5rem;
-        transform: translateY(-50%);
-        font-size: 1.6rem;
-        cursor: pointer;
-        z-index: 1001;
-    }
-  } */
-  
-/* Responsive */
-@media (max-width: 768px) {
-    .nav-links {
-      display: none;
-    }
-  
-    .hamburger {
-      margin-left: auto;
-    }
-  }
-
-  body {
-    animation: fadeIn 0.8s ease-in;
+  /*──────────────────────────────────────────────────────────────────────────────
+    Projects Section & Cards
+  ──────────────────────────────────────────────────────────────────────────────*/
+  #projects {
+    padding: 2rem;
   }
   
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+  #projects h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .project-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    margin-bottom: 1rem;
+  }
+  
+  .project-card a {
+    color: #0070f3;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  /*──────────────────────────────────────────────────────────────────────────────
+    Footer
+  ──────────────────────────────────────────────────────────────────────────────*/
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #111;
+    color: #aaa;
+    font-size: 0.9rem;
+  }
+  
+  /*──────────────────────────────────────────────────────────────────────────────
+    Responsive: hide nav-links on mobile, keep hamburger
+  ──────────────────────────────────────────────────────────────────────────────*/
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
   }
   
