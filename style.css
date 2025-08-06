@@ -26,6 +26,30 @@ html, body {
   /*──────────────────────────────────────────────────────────────────────────────
     Navbar
   ──────────────────────────────────────────────────────────────────────────────*/
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  /* ─── Profile picture ───────────────────────────────────────────────────────── */
+  .profile-pic {
+    width: 40px;             /* choose your size */
+    height: 40px;
+    border-radius: 50%;      /* makes it circular */
+    object-fit: cover;       /* crop if needed */
+    border: 2px solid white; /* optional white border */
+  }
+  
+  /* ─── Navbar tweaks ───────────────────────────────────────────────────────── */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: #111;
+  }
+  
   .navbar {
     display: flex;
     justify-content: flex-end;
