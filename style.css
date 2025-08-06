@@ -40,16 +40,7 @@ html, body {
     object-fit: cover;       /* crop if needed */
     border: 2px solid white; /* optional white border */
   }
-  
-  /* ─── Navbar tweaks ───────────────────────────────────────────────────────── */
-  .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    background: #111;
-  }
-  
+    
   .navbar {
     display: flex;
     justify-content: flex-end;
