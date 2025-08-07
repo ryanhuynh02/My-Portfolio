@@ -43,7 +43,14 @@ html, body {
     border: 2px solid white;/* optional outline */
   }
   
+  /* Right group: links + burger */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* space between links and burger */
+  }
   /* the three links */
+  
   .nav-links {
     list-style: none;
     display: flex;
