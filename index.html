@@ -61,20 +61,20 @@
     <header>
         <!-- Top nav with links + burger -->
         <nav class="navbar">
-            <div class="nav-left">
-              <!-- profile picture -->
-              <img src="images/profile.png" alt="Ryan Huynh" class="profile-pic" />
-              <!-- nav links -->
+            <!-- Left: just the profile pic -->
+            <img src="images/profile.png" alt="Ryan Huynh" class="profile-pic" />
+          
+            <!-- Right: links + burger in one flex group -->
+            <div class="nav-right">
               <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="mailto:ryhuynh2@gmail.com">Contact</a></li>
               </ul>
+              <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
             </div>
-            <!-- hamburger (always visible) -->
-            <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
           </nav>
-          </div>
+          
       
           <!-- ─── Intro ────────────────────────────────────────────────────── -->
           <div class="intro">
