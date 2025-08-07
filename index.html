@@ -62,55 +62,46 @@
         <!-- Top nav with links + burger -->
         <nav class="navbar">
             <div class="nav-left">
-    <!-- 1. profile picture -->
-    <img src="images/profile.png" alt="Ryan Huynh" class="profile-pic">
-
-    <!-- 2. the links -->
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="mailto:ryhuynh2@gmail.com">Contact</a></li>
-    </ul>
-  </div>
-
-  <!-- 3. the hamburger -->
-  <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
-</nav>
-          <ul class="nav-links">
-            <li><a href="index.html">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="mailto:ryhuynh2@gmail.com">Contact</a></li>
-          </ul>
-          <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
-        </nav>
-    
-        <!-- Sidebar menu (initially width:0) -->
-        <div id="sideMenu" class="side-menu">
-          <button class="close-btn" onclick="toggleMenu()">
-            close <span class="close-icon">&times;</span>
-          </button>
-          <nav>
-            <a href="index.html">About</a>
-            <a href="#projects">Projects</a>
-            <a href="mailto:ryhuynh2@gmail.com">Contact</a>
+              <!-- profile picture -->
+              <img src="images/profile.png" alt="Ryan Huynh" class="profile-pic" />
+              <!-- nav links -->
+              <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="mailto:ryhuynh2@gmail.com">Contact</a></li>
+              </ul>
+            </div>
+            <!-- hamburger (always visible) -->
+            <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
           </nav>
-        </div>
-    
-        <!-- Intro section -->
-        <div class="intro">
-          <h1>Hi, I'm Ryan Huynh</h1>
-          <p>Aspiring developer | Portfolio of my work</p>
-        </div>
-      </header>
       
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-card">
-      <a href="projects/project1.html">Project 1</a>
-      <p>Door Sensor.</p>
-    </div>
-    <!-- Add more .project-card blocks here -->
-  </section>
+          <!-- ─── Sidebar (slide-in) ───────────────────────────────────────── -->
+          <div id="sideMenu" class="side-menu">
+            <button class="close-btn" onclick="toggleMenu()">
+              close <span class="close-icon">&times;</span>
+            </button>
+            <nav>
+              <a href="index.html">Home</a>
+              <a href="#projects">Projects</a>
+              <a href="mailto:ryhuynh2@gmail.com">Contact</a>
+            </nav>
+          </div>
+      
+          <!-- ─── Intro ────────────────────────────────────────────────────── -->
+          <div class="intro">
+            <h1>Hi, I'm Ryan Huynh</h1>
+            <p>Aspiring developer | Portfolio of my work</p>
+          </div>
+        </header>
+      
+        <!-- ─── Projects ──────────────────────────────────────────────────── -->
+        <section id="projects">
+          <h2>Projects</h2>
+          <div class="project-card">
+            <a href="projects/project1.html">Project 1</a>
+            <p>Door Sensor.</p>
+          </div>
+        </section>
 
   <footer>
     &copy; 2025 Ryan Huynh | All rights reserved
