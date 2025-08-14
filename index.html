@@ -2,117 +2,153 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ryan Huynh | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ryan Huynh • Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #111;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      font-size: 1.2rem;
-      color: #ccc;
-    }
-    #projects {
-      padding: 2rem;
-    }
-    #projects h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-    .project-card {
-      background: white;
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-      margin-bottom: 1rem;
-    }
-    .project-card a {
-      color: #0070f3;
-      font-weight: bold;
-      text-decoration: none;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #111;
-      color: #aaa;
-      font-size: 0.9rem;
-    }
-  </style>
 </head>
-
 <body>
-    <header>
-        <!-- Top nav with links + burger -->
-        <nav class="navbar">
-            <!-- Left: just the profile pic -->
-            <img src="images/profile.png" alt="Ryan Huynh" class="profile-pic" />
-          
-            <!-- Right: links + burger in one flex group -->
-            <div class="nav-right">
-              <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="mailto:ryhuynh2@gmail.com">Contact</a></li>
-              </ul>
-              <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
-            </div>
-          </nav>
-          
-      
-          <!-- ─── Intro ────────────────────────────────────────────────────── -->
-          <div class="intro">
-            <h1>Hi, I'm Ryan Huynh</h1>
-            <p>Aspiring developer | Portfolio of my work</p>
-          </div>
-        </header>
-      
-        <!-- ─── Projects ──────────────────────────────────────────────────── -->
-        <section id="projects">
-          <h2>Projects</h2>
-          <div class="project-card">
-            <a href="projects/project1.html">Project 1</a>
-            <p>Door Sensor.</p>
-          </div>    
-        </section>
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <nav class="navbar container">
+      <!-- Left: small circular avatar -->
+      <img src="images/profile.png" alt="Ryan Huynh" class="profile-pic" />
 
-  <footer>
-    &copy; 2025 Ryan Huynh | All rights reserved
+      <!-- Right: links + hamburger in one group -->
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="mailto:ryhuynh2@gmail.com">Contact</a></li>
+        </ul>
+        <button class="hamburger" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Right slide-in menu -->
+  <aside id="sideMenu" class="side-menu">
+    <button class="close-btn" aria-label="Close menu" onclick="toggleMenu()">close <span class="close-icon">×</span></button>
+    <nav class="side-nav">
+      <a href="#projects" onclick="toggleMenu()">Projects</a>
+      <a href="#about" onclick="toggleMenu()">About</a>
+      <a href="mailto:ryhuynh2@gmail.com" onclick="toggleMenu()">Contact</a>
+    </nav>
+  </aside>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <div class="eyebrow">Portfolio</div>
+        <h1>Hi, I’m <span class="accent">Ryan Huynh</span></h1>
+        <p class="subtitle">Aspiring developer focused on simple, useful projects. Here’s a snapshot of my work.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="mailto:ryhuynh2@gmail.com">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <!-- Optional hero visual; replace with your image if you want -->
+        <img src="images/profile.png" alt="Ryan" class="hero-avatar" />
+        <div class="hero-badge">Available for internships</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Grid -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <a class="link" href="https://github.com/ryanhuynh02" target="_blank" rel="noreferrer">GitHub →</a>
+      </div>
+
+      <div class="grid">
+        <!-- Project Card -->
+        <article class="card">
+          <div class="card-top">
+            <span class="tag">IoT</span>
+          </div>
+          <h3 class="card-title"><a href="projects/project1.html">Door Sensor</a></h3>
+          <p class="card-desc">Low-cost door sensor with notifications. Built with Arduino + JS dashboard.</p>
+          <div class="card-meta">HTML • CSS • JS • Arduino</div>
+        </article>
+
+        <!-- Duplicate/modify for more projects -->
+        <article class="card">
+          <div class="card-top">
+            <span class="tag">Web</span>
+          </div>
+          <h3 class="card-title"><a href="#">Portfolio v2</a></h3>
+          <p class="card-desc">Responsive site with off-canvas nav and fast static hosting on Vercel.</p>
+          <div class="card-meta">HTML • CSS • JS</div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="tag">Experiment</span>
+          </div>
+          <h3 class="card-title"><a href="#">Small Tools</a></h3>
+          <p class="card-desc">Tiny utilities: color picker, unit converter, and a markdown previewer.</p>
+          <div class="card-meta">JS • DOM • UX</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section alt">
+    <div class="container about-wrap">
+      <div class="about-text">
+        <h2>About</h2>
+        <p>I enjoy building small, practical projects that solve real problems. I’m exploring embedded systems and front-end development. I learn by shipping.</p>
+        <ul class="bullets">
+          <li>Comfortable with HTML/CSS/JS</li>
+          <li>Curious about React & Next.js</li>
+          <li>Love clean UI and fast load times</li>
+        </ul>
+      </div>
+      <div class="about-panel">
+        <div class="stat">
+          <div class="stat-num">+10</div>
+          <div class="stat-label">mini-projects</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">3</div>
+          <div class="stat-label">hardware builds</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">∞</div>
+          <div class="stat-label">curiosity</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Ryan Huynh</span>
+      <div class="footer-links">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="mailto:ryhuynh2@gmail.com">Contact</a>
+      </div>
+    </div>
   </footer>
 
   <script>
+    // Side menu toggle
     function toggleMenu() {
-      const menu = document.getElementById('sideMenu');
+      const menu   = document.getElementById('sideMenu');
       const burger = document.querySelector('.hamburger');
-  
-      // toggle the menu “open” state
-      const isOpen = menu.classList.toggle('open');
-  
-      if (isOpen) {
-        menu.style.width = '250px';
-        burger.style.display = 'none';       // hide the hamburger
-      } else {
-        menu.style.width = '0';
-        burger.style.display = 'block';      // show it again
-      }
+      const open   = menu.classList.toggle('open');
+      burger.style.opacity = open ? '0' : '1';
+      burger.style.pointerEvents = open ? 'none' : 'auto';
     }
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-    
 </body>
 </html>
